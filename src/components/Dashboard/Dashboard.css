@@ -1,0 +1,128 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5rem;
+    margin-left: 5rem; 
+}
+
+.language-title, .language-sub-header, .total-score-status {
+    display: flex;
+    justify-content: center;
+}
+
+.word-container {
+    list-style: none;
+}
+
+.word-list {
+border: 10px solid black;
+padding: 10px 20px 10px 20px;
+border-radius: 5px;
+list-style: none;
+width: 100%;
+background: #E52D27;  
+background: -webkit-linear-gradient(to right, #B31217, #E52D27);  
+background: linear-gradient(to right, #B31217, #E52D27);
+border: 0;
+border-radius: 10px;
+}
+
+.jpn-word {
+border: 1px solid black;
+padding: 9px 43px 14px 25px;
+width: 543px;
+border-radius: 5px;
+list-style: none;
+width: 100%;
+margin: 1rem 1rem 1rem 0rem;
+font-weight: bold;
+background: #fff;
+}
+
+.word-list-status {
+    list-style: none;
+    padding: 10px 10px 10px;
+}
+
+.correct-count {
+    margin-bottom: 5px;
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+
+}
+
+/*  Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5rem;
+        margin-left: 5rem;
+        align-items: center;
+    }
+
+    .total-score-status {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .language-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .word-container {
+        margin-left: 6rem;
+        margin-right: 6rem;
+        list-style: none;
+    }
+
+    .word-list {
+    border: 10px solid black;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    list-style: none;
+    width: 100%;
+    background: #E52D27;  
+    background: -webkit-linear-gradient(to right, #B31217, #E52D27);  
+    background: linear-gradient(to right, #B31217, #E52D27);
+    border: 0;
+    border-radius: 10px;
+    }
+
+    .jpn-word {
+    border: 1px solid black;
+    padding: 14px 43px 14px 25px;
+    width: 543px;
+    border-radius: 5px;
+    list-style: none;
+    width: 100%;
+    margin: 1rem 1rem 1rem 0rem;
+    font-weight: bold;
+    background: #fff;
+    }
+
+    .word-list-status {
+        list-style: none;
+        padding: 10px 10px 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .correct-count {
+        margin-bottom: 5px;
+        padding: 60px;
+    }
+
+    .incorrect-count {
+        padding: 60px;
+    }
+}
+
+
+
