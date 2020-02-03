@@ -1,0 +1,9 @@
+.submit {
+background: #E52D27;  
+background: -webkit-linear-gradient(to right, #B31217, #E52D27);  
+background: linear-gradient(to right, #B31217, #E52D27);
+border: 0;
+border-radius: 10px;
+color: #fff;
+padding: 5px 10px 5px 10px;
+}
