@@ -76,6 +76,10 @@ background: #fff;
         justify-content: center;
     }
 
+    .practice-button {
+        align-self: center;
+    }
+
     .word-container {
         margin-left: 6rem;
         margin-right: 6rem;
