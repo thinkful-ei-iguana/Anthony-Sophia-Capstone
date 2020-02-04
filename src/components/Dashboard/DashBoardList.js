@@ -9,22 +9,21 @@ class DashboardList extends Component {
 
         const wordsList = words.map(word => {
             return (
-                <ul className="word-list">
-                    <li className="jpn-word">{word.original}
-                        <ul className="word-list-status">
-                            <li className="correct-count">Correct: {word.correct_count}</li>
-                            <li className="incorrect-count">Incorrect: {word.incorrect_count}</li>
-                        </ul>
-                    </li>
-                </ul>
+                <li className="word-list">
+                    <h4 className="jpn-word">{word.original}</h4>
+                    <ul className="word-list-status">
+                        <li className="correct-count">correct answer count: {word.correct_count}</li>
+                        <li className="incorrect-count">incorrect answer count: {word.incorrect_count}</li>
+                    </ul>
+                </li>
             )
         })
 
         return (
-            <div className="word-container">
-                <h3 className="language-sub-header">Words to Practice</h3>
+            <section className="word-container">
+                <h3 className="language-sub-header">Words to practice</h3>
                 {wordsList}
-            </div>
+            </section>
         );
     }
 }

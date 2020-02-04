@@ -14,31 +14,6 @@
     list-style: none;
 }
 
-.word-list {
-border: 10px solid black;
-padding: 10px 20px 10px 20px;
-border-radius: 5px;
-list-style: none;
-width: 100%;
-background: #E52D27;  
-background: -webkit-linear-gradient(to right, #B31217, #E52D27);  
-background: linear-gradient(to right, #B31217, #E52D27);
-border: 0;
-border-radius: 10px;
-}
-
-.jpn-word {
-border: 1px solid black;
-padding: 9px 43px 14px 25px;
-width: 543px;
-border-radius: 5px;
-list-style: none;
-width: 100%;
-margin: 1rem 1rem 1rem 0rem;
-font-weight: bold;
-background: #fff;
-}
-
 .word-list-status {
     list-style: none;
     padding: 10px 10px 10px;
@@ -87,7 +62,7 @@ background: #fff;
     }
 
     .word-list {
-    border: 10px solid black;
+    border: 10px solid white;
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
     list-style: none;
@@ -97,18 +72,14 @@ background: #fff;
     background: linear-gradient(to right, #B31217, #E52D27);
     border: 0;
     border-radius: 10px;
+    margin-bottom: 1rem;
+    margin-top:1rem;
     }
 
     .jpn-word {
-    border: 1px solid black;
-    padding: 14px 43px 14px 25px;
-    width: 543px;
-    border-radius: 5px;
-    list-style: none;
-    width: 100%;
-    margin: 1rem 1rem 1rem 0rem;
-    font-weight: bold;
-    background: #fff;
+        text-align: center;
+        color: white;
+        font-size: xx-large;
     }
 
     .word-list-status {
@@ -120,11 +91,15 @@ background: #fff;
 
     .correct-count {
         margin-bottom: 5px;
-        padding: 60px;
+        padding: 10px;
+        color: #fff;
+        font-size: large;
     }
 
     .incorrect-count {
-        padding: 60px;
+        padding: 10px;
+        color: #fff;
+        font-size: large;
     }
 }
 

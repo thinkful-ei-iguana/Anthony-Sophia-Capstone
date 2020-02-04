@@ -10,11 +10,10 @@ class Dashboard extends Component {
     render() {
         return (
             <section className="dashboard">
-                <h3 className='total-score-status'>Total Score: {this.props.language.total_score}</h3>
-                <h1 className='language-title'>{this.props.language.name}</h1>
+                <h2 className='total-score-status'>Total correct answers: {this.props.language.total_score}</h2>
+                <h2 className='language-title'>{this.props.language.name}</h2>
                 <Link to={'/learn'} className="practice-button">
-                    <Button className="submit">
-                        Start Practicing </Button>
+                    <Button className="submit">Start practicing</Button>
                 </Link>
                 <DashboardList words={this.props.words} />
             </section>
