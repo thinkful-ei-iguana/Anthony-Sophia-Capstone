@@ -14,17 +14,17 @@ label {
   margin-right: 15px;
 }
 
-.Returning-User {
+.New-User {
   color: red;
   text-decoration: none;
   float: right;
 }
 
-.Signup-Submit {
+.Login-Submit {
   float: left;
 }
 
-.Btn-Row-Register {
+.Btn-Row {
   margin: auto auto;
   margin-top: 30px;
 }

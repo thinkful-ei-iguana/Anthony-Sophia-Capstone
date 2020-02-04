@@ -1,57 +1,39 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import TokenService from '../../services/token-service'
-import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import React, { Component } from 'react';
+import HeaderMobile from './Header-Mobile';
+import HeaderLarge from './Header-Large';
+import UserContext from '../../contexts/UserContext';
+import './Header.css';
 
 class Header extends Component {
-  static contextType = UserContext
+  static contextType = UserContext;
 
-  handleLogoutClick = () => {
-    this.context.processLogout()
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
   }
 
-  renderLogoutLink() {
-    return (
-      <div>
-        <span>
-          {this.context.user.name}
-        </span>
-        <nav>
-          <Link
-            onClick={this.handleLogoutClick}
-            to='/login'>
-            Logout
-          </Link>
-        </nav>
-      </div>
-    )
-  }
-
-  renderLoginLink() {
-    return (
-      <nav>
-        <Link to='/login'>Login</Link>
-        {' '}
-        <Link to='/register'>Sign up</Link>
-      </nav>
-    )
-  }
+  // toogles mobile menu open/close
+  toggleMenu = () => {
+    this.setState(prevState => ({ open: !prevState.open }));
+  };
 
   render() {
     return (
       <header>
-        <h1>
-          <Link to='/'>
-            Spaced repetition
-          </Link>
-        </h1>
-        {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
+        <button className='Open-Menu' onClick={this.toggleMenu}>
+          <i className='fas fa-bars'></i>
+        </button>
+        <HeaderMobile
+          id='MobileMenu'
+          state={this.state}
+          mobileToggle={this.toggleMenu}
+        />
+        <HeaderLarge state={this.state} />
       </header>
     );
   }
 }
 
-export default Header
+export default Header;

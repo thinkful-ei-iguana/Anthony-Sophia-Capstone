@@ -1,59 +1,54 @@
-import React, { Component } from 'react'
-import { Input, Label } from '../Form/Form'
-import AuthApiService from '../../services/auth-api-service'
-import UserContext from '../../contexts/UserContext'
-import Button from '../Button/Button'
+import React, { Component } from 'react';
+import { Input, Label } from '../Form/Form';
+import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
+import Button from '../Button/Button';
+import './LoginForm.css';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends Component {
   static defaultProps = {
-    onLoginSuccess: () => { }
-  }
+    onLoginSuccess: () => {}
+  };
 
-  static contextType = UserContext
+  static contextType = UserContext;
 
-  state = { error: null }
+  state = { error: null };
 
-  firstInput = React.createRef()
+  firstInput = React.createRef();
 
   handleSubmit = ev => {
-    ev.preventDefault()
-    const { username, password } = ev.target
+    ev.preventDefault();
+    const { username, password } = ev.target;
 
-    this.setState({ error: null })
+    this.setState({ error: null });
 
     AuthApiService.postLogin({
       username: username.value,
-      password: password.value,
+      password: password.value
     })
       .then(res => {
-        username.value = ''
-        password.value = ''
-        this.context.processLogin(res.authToken)
-        this.props.onLoginSuccess()
+        username.value = '';
+        password.value = '';
+        this.context.processLogin(res.authToken);
+        this.props.onLoginSuccess();
       })
       .catch(res => {
-        this.setState({ error: res.error })
-      })
-  }
+        this.setState({ error: res.error });
+      });
+  };
 
   componentDidMount() {
-    this.firstInput.current.focus()
+    this.firstInput.current.focus();
   }
 
   render() {
-    const { error } = this.state
+    const { error } = this.state;
     return (
-      <form
-        className='LoginForm'
-        onSubmit={this.handleSubmit}
-      >
-        <div role='alert'>
-          {error && <p>{error}</p>}
-        </div>
-        <div>
-          <Label htmlFor='login-username-input'>
-            Username
-          </Label>
+      <form className='LoginForm' onSubmit={this.handleSubmit}>
+        <div role='alert'>{error && <p>{error}</p>}</div>
+        <div className='Form-Section'>
+          <Label htmlFor='login-username-input'>Username</Label>
           <Input
             ref={this.firstInput}
             id='login-username-input'
@@ -61,10 +56,8 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <div>
-          <Label htmlFor='login-password-input'>
-            Password
-          </Label>
+        <div className='Form-Section'>
+          <Label htmlFor='login-password-input'>Password</Label>
           <Input
             id='login-password-input'
             name='password'
@@ -72,12 +65,17 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <Button className="submit" type='submit'>
-          Login
-        </Button>
+        <div className='Btn-Row'>
+          <Button className='submit Login-Submit' type='submit'>
+            Login
+          </Button>
+          <Link className='New-User' to='/register'>
+            New User?
+          </Link>
+        </div>
       </form>
-    )
+    );
   }
 }
 
-export default LoginForm
+export default LoginForm;
