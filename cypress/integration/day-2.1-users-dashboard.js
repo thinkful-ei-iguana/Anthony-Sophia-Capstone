@@ -55,9 +55,9 @@ describe(`User story: User's dashboard`, function() {
     cy.fixture('language.json').then(({ words }) => {
 
       words.forEach((word, idx) => {
-        cy.get('main section li').eq(idx).within($li => {
-
-          cy.get('h4').should('have.text', word.original)
+        cy.get('main section .word-list').eq(idx).within($li => {
+          cy.get('h4')
+            .should('have.text', word.original)
 
           cy.root()
             .should(
