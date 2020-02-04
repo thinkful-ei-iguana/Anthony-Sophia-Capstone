@@ -20,10 +20,13 @@ class DashboardList extends Component {
         })
 
         return (
-            <section className="word-container">
+            <div>
                 <h3 className="language-sub-header">Words to practice</h3>
-                {wordsList}
-            </section>
+                <section className="word-container">
+
+                    {wordsList}
+                </section>
+            </div>
         );
     }
 }
