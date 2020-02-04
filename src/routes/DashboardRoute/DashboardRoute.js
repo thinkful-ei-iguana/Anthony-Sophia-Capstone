@@ -16,9 +16,6 @@ class DashboardRoute extends Component {
           language: response.language,
           words: response.words
         })
-
-        console.log(this.state.language);
-        console.log(this.state.words);
       })
       .catch(error => {
         console.error({ error })
@@ -29,7 +26,7 @@ class DashboardRoute extends Component {
 
   render() {
     return (
-      <Dashboard 
+      <Dashboard
         language={this.state.language}
         words={this.state.words}
       />
