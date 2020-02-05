@@ -78,6 +78,7 @@
 
   .mobile-Login {
     color: red;
+    margin-left: 10px;
   }
 
   .mobile-Register {
@@ -95,10 +96,11 @@
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: red;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    margin-left: 10px;
   }
 
   .dropdown-content {
@@ -150,6 +152,6 @@
   }
 
   button i {
-    color: var(--text);
+    color: red;
   }
 }

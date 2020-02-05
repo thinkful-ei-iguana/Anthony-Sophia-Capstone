@@ -27,7 +27,9 @@ class HeaderMobile extends Component {
               {TokenService.hasAuthToken() ? (
                 <div className='Header__logged-in'>
                   <div className='dropdown'>
-                    <button className='dropbtn'>Account</button>
+                    <button className='dropbtn'>
+                      {this.context.user.name}
+                    </button>
                     <div className='dropdown-content'>
                       <Link to={`/user/${this.context.user.name}`}>
                         My Account

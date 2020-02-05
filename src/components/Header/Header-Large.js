@@ -14,8 +14,8 @@ class HeaderLarge extends Component {
   renderLogoutLink() {
     return (
       <div>
-        <span>{this.context.user.name}</span>
-        <nav>
+        <nav className='Desktop-LoggedIn'>
+          <span>{this.context.user.name}</span>
           <Link onClick={this.handleLogoutClick} to='/login'>
             Logout
           </Link>

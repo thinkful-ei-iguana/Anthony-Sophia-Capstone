@@ -7,6 +7,18 @@
     margin-left: 25px;
   }
 
+  .Desktop-LoggedIn {
+    float: right;
+    margin-right: 25px;
+    color: red;
+    text-decoration: none;
+  }
+
+  .Desktop-LoggedIn span {
+    margin-right: 25px;
+    color: #000;
+  }
+
   nav a {
     float: right;
     margin-right: 25px;
