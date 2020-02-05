@@ -19,6 +19,17 @@ const LearnJpnApiService = {
     }).then(res =>
       !res.ok ? res.json().then(event => Promise.reject(event)) : res.json()
     );
+  },
+  processGuess(guess) {
+    return fetch(`${config.API_ENDPOINT}/language/guess`, {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${TokenService.getAuthToken()}`
+      },
+      body: JSON.stringify(guess)
+    }).then(res =>
+      !res.ok ? res.json().then(event => Promise.reject(event)) : res.json()
+    );
   }
 };
 

@@ -6,7 +6,8 @@ class LearningRoute extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      word: {}
+      word: {},
+      comparedValues: {}
     };
   }
 
@@ -15,7 +16,11 @@ class LearningRoute extends Component {
   }
 
   onSubmit = ev => {
-    // submit function
+    ev.preventDefault();
+    const { guess } = ev.target;
+    LangaugeService.processGuess(guess.value).then(res =>
+      this.setState({ comparedValues: res })
+    );
   };
 
   render() {
@@ -33,7 +38,7 @@ class LearningRoute extends Component {
           </ul>
           <h5>Translate the word</h5>
           <form className='Translation-Form' onSubmit={this.onSubmit}>
-            <input type='text' />
+            <input type='text' name='guess' />
             <button type='submit'>submit</button>
           </form>
           <h6>Total correct attempts: {this.state.word.totalScore}</h6>
