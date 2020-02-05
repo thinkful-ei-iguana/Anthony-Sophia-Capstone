@@ -24,9 +24,10 @@ const LearnJpnApiService = {
     return fetch(`${config.API_ENDPOINT}/language/guess`, {
       method: 'POST',
       headers: {
+        'content-type': 'application/json',
         authorization: `Bearer ${TokenService.getAuthToken()}`
       },
-      body: JSON.stringify(guess)
+      body: JSON.stringify({ guess })
     }).then(res =>
       !res.ok ? res.json().then(event => Promise.reject(event)) : res.json()
     );
