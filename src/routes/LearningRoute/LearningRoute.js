@@ -38,7 +38,7 @@ class LearningRoute extends Component {
   render() {
     return (
       <section className='Learn-Words'>
-        <h4>{this.state.word.nextWord}</h4>
+        <h4>{this.state.word.currentWord}</h4>
         <div className='Word-Card'>
           <ul className='Card'>
             <li className='left'>

@@ -6,12 +6,12 @@ import IdleService from '../services/idle-service';
 const UserContext = React.createContext({
   user: {},
   error: null,
-  setError: () => {},
-  clearError: () => {},
-  setUser: () => {},
-  processLogin: () => {},
-  processLogout: () => {},
-  setGuessData: () => {}
+  setError: () => { },
+  clearError: () => { },
+  setUser: () => { },
+  processLogin: () => { },
+  processLogout: () => { },
+  setGuessData: () => { }
 });
 
 export default UserContext;
@@ -103,7 +103,6 @@ export class UserProvider extends Component {
   };
 
   setGuessData = data => {
-    console.log(data);
     this.setState({ guessData: data });
   };
 
