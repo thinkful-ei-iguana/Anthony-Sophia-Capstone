@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import TokenService from '../../services/token-service';
 import UserContext from '../../contexts/UserContext';
 import './Header-Large.css';
+import DozoLogo from '../../assets/logo.png';
 
 class HeaderLarge extends Component {
   static contextType = UserContext;
@@ -35,9 +36,9 @@ class HeaderLarge extends Component {
   render() {
     return (
       <header className='Desktop-Menu'>
-        <h1>
-          <Link to='/'>Spaced repetition</Link>
-        </h1>
+        <Link to='/'>
+          <img className='Logo' src={DozoLogo} alt='Dozo Logo' />
+        </Link>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

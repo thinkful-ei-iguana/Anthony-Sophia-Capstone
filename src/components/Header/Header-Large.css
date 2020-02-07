@@ -1,10 +1,13 @@
 @media only screen and (min-width: 1024px) {
-  h1 a {
-    display: block;
+  .Logo {
     float: left;
-    text-decoration: none;
-    color: red;
     margin-left: 25px;
+    width: 150px;
+    height: auto;
+  }
+
+  .Desktop-Menu {
+    margin-top: 15px;
   }
 
   .Desktop-LoggedIn {

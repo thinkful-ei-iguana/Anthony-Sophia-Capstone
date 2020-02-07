@@ -51,7 +51,9 @@ class LearningRoute extends Component {
           <h5>Translate the word</h5>
           <form className='Translation-Form' onSubmit={this.onSubmit}>
             <input type='text' name='guess' />
-            <button type='submit'>submit</button>
+            <button className='Guess-Submit' type='submit'>
+              submit
+            </button>
           </form>
           <h6>Total correct attempts: {this.state.word.totalScore}</h6>
         </div>

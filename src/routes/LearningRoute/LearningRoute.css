@@ -15,7 +15,7 @@
 
 .Word-Card {
   border: 10px solid white;
-  padding: 30px 50px 30px 50px;
+  padding: 20px 40px 20px 40px;
   list-style: none;
   background: #e52d27;
   background: -webkit-linear-gradient(to right, #b31217, #e52d27);
@@ -62,15 +62,26 @@
   margin-right: 20px;
 }
 
-.Translation-Form button {
-  color: #fff;
-  border: 0;
-  background: transparent;
+.Guess-Submit {
+  color: #000;
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px 10px 5px 10px;
+  font-size: 13px;
+  box-shadow: 0px 11px 21px -8px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+
+.Guess-Submit:hover {
+  background: #f0f0f0f0;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1024px) {
   .Word-Card {
-    padding: 30px 50px 0px 50px;
+    padding: 30px 50px 30px 50px;
   }
 
   .Word-Card h5 {
