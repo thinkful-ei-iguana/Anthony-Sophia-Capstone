@@ -1,0 +1,29 @@
+.Results-Page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Correct,
+.Wrong {
+  width: 80%;
+  margin: auto auto;
+}
+
+.Correct h2 {
+  color: green;
+  margin-bottom: 15px;
+}
+
+.Wrong h2 {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.Correct p,
+.Wrong p {
+  margin-bottom: 15px;
+}
