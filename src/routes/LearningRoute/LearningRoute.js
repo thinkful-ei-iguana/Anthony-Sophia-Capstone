@@ -50,7 +50,7 @@ class LearningRoute extends Component {
           </ul>
           <h5>Translate the word</h5>
           <form className='Translation-Form' onSubmit={this.onSubmit}>
-            <input type='text' name='guess' />
+            <input required type='text' name='guess' />
             <button className='Guess-Submit' type='submit'>
               submit
             </button>

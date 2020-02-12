@@ -31,11 +31,10 @@ class HeaderMobile extends Component {
                       {this.context.user.name}
                     </button>
                     <div className='dropdown-content'>
-                      <Link to={`/user/${this.context.user.name}`}>
-                        My Account
-                      </Link>
-                      <Link to='/Create-Word'>Create</Link>
-                      <Link onClick={this.handleLogoutClick} to='/login'>
+                      <Link
+                        onClick={this.context.handleLogoutClick}
+                        to='/login'
+                      >
                         Logout
                       </Link>
                     </div>
