@@ -1,4 +1,34 @@
-# Spaced Repetition Capstone
+# Dozo
+
+Dozo is an application that implements Spaced Repetition where users can learn basic Japanese words and can take a practice word anytime when they are ready for it. Users able to check their answer is correct or incorrect directly on the learning page. Also, Dozo will display how many times they got correct or incorrect answers for each word and total score on the dashboard page. 
+
+Live Demo: https://spaced-repetition.anthonytb.now.sh/
+Server Repo: https://github.com/thinkful-ei-iguana/Anthony-Sophia-Capstone-Server 
+
+## Account Demo Login
+
+Username: admin
+
+Password: pass
+
+## Techinologies Used
+
+Client Side deployed on Zeit
+
+- React.js
+- JavaScript
+- HTML
+- CSS
+- Cypress
+
+API Server Side deployed on Heroku
+
+- Express.js
+- Node.js
+- PostgreSQL
+- JWT Decode
+
+-----------------------
 
 ## Setup
 
