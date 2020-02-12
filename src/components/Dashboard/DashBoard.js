@@ -13,7 +13,7 @@ class Dashboard extends Component {
                 <h2 className='total-score-status'>Total correct answers: {this.props.language.total_score}</h2>
                 <h2 className='language-title'>{this.props.language.name}</h2>
                 <Link to={'/learn'} className="practice-button">
-                    <Button className="submit">Start practicing</Button>
+                    Start practicing
                 </Link>
                 <DashboardList words={this.props.words} />
             </section>

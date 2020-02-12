@@ -11,7 +11,7 @@ export default class Result extends React.Component {
     const answerCheck = () => {
       if (this.context.guessData.isCorrect === true) {
         return (
-          <div className='Correct'>
+          <div aria-live="polite" className='Correct'>
             <h2>You were correct!</h2>
             <div className='feedback'>
               <p>
@@ -29,7 +29,7 @@ export default class Result extends React.Component {
       if (this.context.guessData.isCorrect === false) {
         return (
           <div>
-            <div className='Wrong'>
+            <div aria-live="polite" className='Wrong'>
               <h2>Good try, but not quite right</h2>
               <div className='feedback'>
                 <p>

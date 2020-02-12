@@ -22,10 +22,10 @@ class DashboardList extends Component {
         return (
             <div>
                 <h3 className="language-sub-header">Words to practice</h3>
-                <section className="word-container">
+                <ul aria-live="polite" className="word-container">
 
                     {wordsList}
-                </section>
+                </ul>
             </div>
         );
     }

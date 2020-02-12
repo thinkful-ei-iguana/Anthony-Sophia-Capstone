@@ -35,14 +35,14 @@ class HeaderLarge extends Component {
 
   render() {
     return (
-      <header className='Desktop-Menu'>
+      <div className='Desktop-Menu'>
         <Link to='/'>
           <img className='Logo' src={DozoLogo} alt='Dozo Logo' />
         </Link>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
-      </header>
+      </div>
     );
   }
 }

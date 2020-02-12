@@ -14,6 +14,15 @@
 
 .practice-button {
   align-self: center;
+  text-decoration: none;
+  background: #E52D27;
+  background: -webkit-linear-gradient(to right, #B31217, #E52D27);
+  background: linear-gradient(to right, #B31217, #E52D27);
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.6em 1.5em;
+  margin: 0 4em 0.3em 4em;
 }
 
 .language-title {
