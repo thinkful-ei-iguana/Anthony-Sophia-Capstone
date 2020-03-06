@@ -11,7 +11,13 @@ Server Repo: https://github.com/thinkful-ei-iguana/Anthony-Sophia-Capstone-Serve
 Username: admin
 
 Password: pass
------------------------
+
+## Screenshots
+![Login](src/images/dozo-login.png "Login")
+![Register](src/images/dozo-register.png "Register")
+![Dashboard](src/images/dozo-dashboard.png "Dashboard")
+![Learn page](src/images/dozo-learn.png "Learn-page")
+
 
 ## Setup
 
